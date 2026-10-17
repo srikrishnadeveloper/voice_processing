@@ -1,0 +1,26 @@
+# Audio + transcripts are personal data — never commit them
+audio/
+out/
+recordings/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.opus
+
+# Model weights / CT2 conversions
+models/
+*-ct2/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store

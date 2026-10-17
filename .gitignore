@@ -2,6 +2,9 @@
 audio/
 out/
 recordings/
+sample/
+*transcript*.txt
+transcripts/
 *.wav
 *.mp3
 *.m4a

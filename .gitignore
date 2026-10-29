@@ -31,6 +31,7 @@ Thumbs.db
 # Kaggle run artifacts (model weights, downloaded outputs, personal data)
 kaggle_data/
 kaggle_out/
+batches/
 hf-model/
 model-ct2/
 *-ct2/

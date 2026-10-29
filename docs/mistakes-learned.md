@@ -13,6 +13,12 @@
 - General rule from user: always plan first, pick the correct method once, and
   search the web when information is missing instead of retrying the same
   failing action.
+- 2026-10-29 UPDATE on MTP CopyHere: the earlier failures were caused by the
+  0x14 flags (FOF_SILENT|NOCONFIRMATION), NOT CopyHere itself. Plain
+  `$dest.CopyHere($item)` / `$dest.CopyHere($folderItem)` with NO flags works
+  fine on realme GT 7 — copied all 3,253 files (~1.2 GB) in ~10 min. Keep the
+  issuing PowerShell session alive until copy completes (transfer is async).
+  Folder-level CopyHere = one call, creates `dest\<FolderName>\` subtree.
 - 2026-10-29: `ct2-transformers-converter` requires `tokenizer.json` inside the
   model — old fine-tunes (vasista22) ship only vocab.json/merges.txt. Fix:
   `snapshot_download` locally → `AutoTokenizer.from_pretrained(dir).save_pretrained(dir)`

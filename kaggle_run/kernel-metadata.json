@@ -1,0 +1,16 @@
+{
+ "id": "srikrishnaos/tamil-calls-run",
+ "title": "tamil calls run",
+ "code_file": "tamil_calls_run.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "srikrishnaos/voice-processing-code",
+  "srikrishnaos/tamil-ct2-model"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

@@ -58,3 +58,26 @@ valid conversational Tamil. Fetched transcript.txt via signed-URL API call
 (bulk output download kept dying on user's flaky network). Learned: don't
 leave HF snapshot dirs under /kaggle/working — they become kernel output and
 add ~6GB to output downloads.
+
+## 2026-10-29 — Full phone dump + batch upload/run
+
+**Prompt summary:** User asked to pull all call recordings off the phone and
+upload/process in parallel small batches. Later unplugged the phone mid-way
+("do for what i have") — luckily the copy had already finished.
+
+**Response summary:** Retried MTP with Shell COM CopyHere **without flags**
+(previously used 0x14 FOF flags triggered the "requested value cannot be
+determined" dialog — the flags were the bug). Single folder-level CopyHere of
+`Call Recordings` copied ALL 3,253 files (1,186 MB, 0 zero-byte, ffprobe
+verified) to `recordings/Call Recordings` in ~10 min. Actual count 3,253 vs
+indexed 3,091 (new recordings since indexing). Avg call ~2 min → ~112 h
+audio total ≈ 3-4 GPU-h on dual T4.
+
+Architecture for bulk run (avoids GitHub push dependency + per-run convert):
+- `srikrishnaos/voice-processing-code` dataset = src/transcribe.py (private)
+- `srikrishnaos/tamil-ct2-model` dataset = pre-converted CT2 int8_float16
+  model (1.5 GB, reused from sample-test output — saves ~10 min convert/run)
+- `srikrishnaos/tamil-calls-b001..b006` datasets = 6 batches × ~550 files
+  (~200 MB each), hardlinked locally (no extra disk)
+- Kernel `srikrishnaos/tamil-calls-run` attaches code+model+current batch;
+  metadata updated per batch push. transcribe.py unchanged.

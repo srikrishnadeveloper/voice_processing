@@ -12,12 +12,25 @@ Usage:
 import argparse
 import json
 import multiprocessing as mp
+import subprocess
 import sys
 import time
 import traceback
 from pathlib import Path
 
 AUDIO_EXTS = {".wav", ".mp3", ".m4a", ".flac", ".ogg", ".aac", ".opus", ".wma", ".mp4", ".amr", ".3gp"}
+
+
+def decode(path):
+    """Decode to 16 kHz mono float32 ndarray via ffmpeg (avoids the PyAV
+    metadata_errors incompatibility in faster-whisper's decoder)."""
+    import numpy as np
+
+    r = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "f32le", "-acodec", "pcm_f32le", "-ar", "16000", "-ac", "1", "-"],
+        capture_output=True, check=True,
+    )
+    return np.frombuffer(r.stdout, dtype=np.float32)
 
 
 def find_audio(input_dirs):
@@ -62,8 +75,9 @@ def worker(rank, device, files, cfg, out_dir):
         t0 = time.time()
         record = {"file": str(path), "status": "ok"}
         try:
+            audio = decode(path)
             segments, info = pipe.transcribe(
-                str(path),
+                audio,
                 language=cfg["language"],
                 batch_size=cfg["batch_size"],
                 beam_size=cfg["beam_size"],

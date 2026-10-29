@@ -1,0 +1,13 @@
+{
+  "id": "srikrishnaos/tamil-sample-test",
+  "title": "tamil sample test",
+  "code_file": "sample_test.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": ["srikrishnaos/tamil-call-samples"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

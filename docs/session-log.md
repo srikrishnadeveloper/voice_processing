@@ -39,3 +39,22 @@ Created `notebooks/sample_test.ipynb` (find audio → ffprobe durations →
 pick shortest/trim to 240s → CT2 convert vasista22/whisper-tamil-large-v2 →
 transcribe on GPU → print transcript). Open: phone sample swap pending
 reconnect; Copy-MTPFiles module downloaded to tools/ for that.
+
+## 2026-10-29 — Kaggle API end-to-end run
+
+**Prompt summary:** User gave a Kaggle API token (KGAT_…, saved to
+`~/.kaggle/access_token`) and asked me to run the whole thing autonomously
+and report the transcript.
+
+**Response summary:** Uploaded a 2-min clip (`sample/sample_2min.wav`, trimmed
+from `Hari Roomate SSN-2610170944.mp3`) as private dataset
+`srikrishnaos/tamil-call-samples`. Pushed `sample_test.ipynb` as GPU kernel
+`srikrishnaos/tamil-sample-test`. Took 4 kernel versions: v1 tokenizer.json
+missing in --copy_files; v2 removed flag but converter itself requires
+tokenizer.json → v3 snapshot_download + AutoTokenizer.save_pretrained then
+convert local dir (worked); v3 then hit PyAV `metadata_errors` TypeError
+(PyAV ≥15) → v4 decode via soundfile→ndarray. COMPLETE — transcript verified
+valid conversational Tamil. Fetched transcript.txt via signed-URL API call
+(bulk output download kept dying on user's flaky network). Learned: don't
+leave HF snapshot dirs under /kaggle/working — they become kernel output and
+add ~6GB to output downloads.

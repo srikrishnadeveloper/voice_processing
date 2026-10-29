@@ -13,6 +13,22 @@
 - General rule from user: always plan first, pick the correct method once, and
   search the web when information is missing instead of retrying the same
   failing action.
+- 2026-10-29: `ct2-transformers-converter` requires `tokenizer.json` inside the
+  model — old fine-tunes (vasista22) ship only vocab.json/merges.txt. Fix:
+  `snapshot_download` locally → `AutoTokenizer.from_pretrained(dir).save_pretrained(dir)`
+  (writes tokenizer.json) → convert the LOCAL dir. Also skip flax_model.msgpack
+  via allow_patterns to halve the download.
+- 2026-10-29: faster-whisper's `decode_audio` calls `av.open(metadata_errors=...)`
+  which PyAV ≥15 rejects (TypeError). Fix: decode with ffmpeg/soundfile to a
+  float32 ndarray and pass that to `transcribe()` — it accepts arrays.
+- 2026-10-29: `kaggle datasets create` on Windows fails if -p contains path
+  separators — its temp file name embeds the path. Fix: mkdir the matching
+  subdir under `$TEMP/.kaggle-uploads/`. Kernel output download: use
+  `api.kernels_output(..., file_pattern='x')` for single files; bulk download
+  also pulls anything left in /kaggle/working (incl. multi-GB model dirs).
+- 2026-10-29: network flapping → wrap every kaggle API call in a retry loop
+  (5-10 tries); signed URLs for kernel output can be fetched once then pulled
+  with `curl --retry-all-errors -C -`.
 
 - Stock `whisper-large-v3` is a bad default for low-resource languages; for
   Tamil it loses ~25 WER points to a language-specific fine-tune. Always check

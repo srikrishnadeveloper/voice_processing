@@ -1,0 +1,69 @@
+[{"stream_name":"stderr","time":6.186467847,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.186502582,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.186507096,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.186509889,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.754498444,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.754540939,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.7545460120000005,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.754550447,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":135.270525745,"data":"clip: /kaggle/input/datasets/srikrishnaos/tamil-call-samples/sample_2min.wav 120.0 sec\n"}
+,{"stream_name":"stderr","time":136.680434326,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":136.681080402,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":136.681096789,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":136.681106096,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":136.681113343,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":136.681118364,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":136.681124156,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":136.68112984,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":136.681134793,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":136.681173531,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":136.681183957,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":136.681188929,"data":"Exception encountered at \"In [3]\":\n"}
+,{"stream_name":"stderr","time":136.681193689,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":136.681198472,"data":"HFValidationError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":136.681202911,"data":"/tmp/ipykernel_22/251359717.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":136.681207519,"data":"     13 rows = []\n"}
+,{"stream_name":"stderr","time":136.681211851,"data":"     14 for label, ct, beam, bs in CONFIGS:\n"}
+,{"stream_name":"stderr","time":136.681216234,"data":"---\u003e 15     m = WhisperModel(MODEL, device='cuda', compute_type=ct)\n"}
+,{"stream_name":"stderr","time":136.681220882,"data":"     16     pipe = BatchedInferencePipeline(model=m)\n"}
+,{"stream_name":"stderr","time":136.681231858,"data":"     17     t0 = time.time()\n"}
+,{"stream_name":"stderr","time":136.681259069,"data":"\n"}
+,{"stream_name":"stderr","time":136.681263811,"data":"/usr/local/lib/python3.13/dist-packages/faster_whisper/transcribe.py in __init__(self, model_size_or_path, device, device_index, compute_type, cpu_threads, num_workers, download_root, local_files_only, files, revision, use_auth_token, **model_kwargs)\n"}
+,{"stream_name":"stderr","time":136.681269159,"data":"    679             model_path = model_size_or_path\n"}
+,{"stream_name":"stderr","time":136.681273519,"data":"    680         else:\n"}
+,{"stream_name":"stderr","time":136.681277439,"data":"--\u003e 681             model_path = download_model(\n"}
+,{"stream_name":"stderr","time":136.681281169,"data":"    682                 model_size_or_path,\n"}
+,{"stream_name":"stderr","time":136.681284589,"data":"    683                 local_files_only=local_files_only,\n"}
+,{"stream_name":"stderr","time":136.681288099,"data":"\n"}
+,{"stream_name":"stderr","time":136.681291513,"data":"/usr/local/lib/python3.13/dist-packages/faster_whisper/utils.py in download_model(size_or_id, output_dir, local_files_only, cache_dir, revision, use_auth_token)\n"}
+,{"stream_name":"stderr","time":136.681295415,"data":"    114         kwargs[\"token\"] = use_auth_token\n"}
+,{"stream_name":"stderr","time":136.681298996,"data":"    115 \n"}
+,{"stream_name":"stderr","time":136.681302423,"data":"--\u003e 116     return huggingface_hub.snapshot_download(repo_id, **kwargs)\n"}
+,{"stream_name":"stderr","time":136.681306063,"data":"    117 \n"}
+,{"stream_name":"stderr","time":136.68130942,"data":"    118 \n"}
+,{"stream_name":"stderr","time":136.681312786,"data":"\n"}
+,{"stream_name":"stderr","time":136.681316066,"data":"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py in _inner_fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":136.681319789,"data":"     82         ):\n"}
+,{"stream_name":"stderr","time":136.68132317,"data":"     83             if arg_name in [\"repo_id\", \"from_id\", \"to_id\"]:\n"}
+,{"stream_name":"stderr","time":136.681327025,"data":"---\u003e 84                 validate_repo_id(arg_value)\n"}
+,{"stream_name":"stderr","time":136.681330553,"data":"     85 \n"}
+,{"stream_name":"stderr","time":136.681335731,"data":"     86         kwargs = smoothly_deprecate_legacy_arguments(fn_name=fn.__name__, kwargs=kwargs)\n"}
+,{"stream_name":"stderr","time":136.681343338,"data":"\n"}
+,{"stream_name":"stderr","time":136.681372133,"data":"/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py in validate_repo_id(repo_id)\n"}
+,{"stream_name":"stderr","time":136.681376388,"data":"    130 \n"}
+,{"stream_name":"stderr","time":136.681379715,"data":"    131     if repo_id.count(\"/\") \u003e 1:\n"}
+,{"stream_name":"stderr","time":136.681418014,"data":"--\u003e 132         raise HFValidationError(\n"}
+,{"stream_name":"stderr","time":136.681422008,"data":"    133             \"Repo id must be in the form 'repo_name' or 'namespace/repo_name':\"\n"}
+,{"stream_name":"stderr","time":136.68142652,"data":"    134             f\" '{repo_id}'. Use `repo_type` argument if needed.\"\n"}
+,{"stream_name":"stderr","time":136.681430012,"data":"\n"}
+,{"stream_name":"stderr","time":136.681477038,"data":"HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/kaggle/input/tamil-ct2-model'. Use `repo_type` argument if needed.\n"}
+,{"stream_name":"stderr","time":136.681491345,"data":"\n"}
+,{"stream_name":"stderr","time":138.700024229,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":138.700077888,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":138.842014216,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":138.842040205,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":139.563009897,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":139.633789426,"data":"[NbConvertApp] Writing 12598 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":142.036945593,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":142.526726028,"data":"[NbConvertApp] Writing 294001 bytes to __results__.html\n"}
+]

@@ -1,0 +1,18 @@
+{
+ "id": "srikrishnaos/mount-probe",
+ "title": "mount probe",
+ "code_file": "mount_probe.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "srikrishnaos/tamil-call-samples",
+  "srikrishnaos/tamil-ct2-model",
+  "srikrishnaos/voice-processing-code",
+  "srikrishnaos/tamil-calls-b001"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

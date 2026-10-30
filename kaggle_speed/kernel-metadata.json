@@ -1,0 +1,16 @@
+{
+ "id": "srikrishnaos/tamil-speed-eval",
+ "title": "tamil speed eval",
+ "code_file": "tamil_speed_eval.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "srikrishnaos/tamil-call-samples",
+  "srikrishnaos/tamil-ct2-model"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

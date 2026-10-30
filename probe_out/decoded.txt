@@ -1,0 +1,64 @@
+﻿[     6.7] 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     6.7] 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     6.7] 0.00s - to python to disable frozen modules.
+[     6.7] 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[     7.3] 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     7.3] 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     7.3] 0.00s - to python to disable frozen modules.
+[     7.3] 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[     8.6] --- t+0s ---
+[     8.6] /kaggle/input -> []
+[     8.6] /kaggle/input/datasets -> []
+[     8.6] /kaggle/input/datasets/srikrishnaos -> []
+[     8.6] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[     8.6] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[     9.1] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[     9.1] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    19.1] --- t+10s ---
+[    19.1] /kaggle/input -> []
+[    19.1] /kaggle/input/datasets -> []
+[    19.1] /kaggle/input/datasets/srikrishnaos -> []
+[    19.1] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[    19.1] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    19.4] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[    19.4] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    29.4] --- t+20s ---
+[    29.4] /kaggle/input -> []
+[    29.4] /kaggle/input/datasets -> []
+[    29.4] /kaggle/input/datasets/srikrishnaos -> []
+[    29.4] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[    29.4] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    29.8] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[    29.8] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    39.8] --- t+30s ---
+[    39.8] /kaggle/input -> []
+[    39.8] /kaggle/input/datasets -> []
+[    39.8] /kaggle/input/datasets/srikrishnaos -> []
+[    39.8] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[    39.8] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    39.8] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[    39.8] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    49.8] --- t+40s ---
+[    49.8] /kaggle/input -> []
+[    49.8] /kaggle/input/datasets -> []
+[    49.8] /kaggle/input/datasets/srikrishnaos -> []
+[    49.8] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[    49.8] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    50.1] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[    50.1] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    60.1] --- t+50s ---
+[    60.1] /kaggle/input -> []
+[    60.1] /kaggle/input/datasets -> []
+[    60.1] /kaggle/input/datasets/srikrishnaos -> []
+[    60.1] /kaggle/input/datasets/srikrishnaos/voice-processing-code -> ['transcribe.py', 'requirements.txt']
+[    60.1] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    60.1] /kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -> ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']
+[    60.1] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    75.2] /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+[    75.2]   cells[i][c] = re.sub('\\\\\|', '|', cell)
+[    75.4] /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+[    75.4]   text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[    76.1] [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+[    76.1] [NbConvertApp] Writing 6772 bytes to __notebook__.ipynb
+[    78.7] [NbConvertApp] Converting notebook __notebook__.ipynb to html
+[    79.3] [NbConvertApp] Writing 279585 bytes to __results__.html

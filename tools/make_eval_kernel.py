@@ -1,0 +1,113 @@
+import json, os, shutil
+
+ROOT = r'C:\Users\srik2\Desktop\extra\voice_processing'
+
+cells = [
+    {"cell_type": "markdown", "metadata": {}, "source": [
+        "# Tamil ASR model comparison\n",
+        "\n",
+        "Transcribes the SAME 2-min call clip with 3 models and prints all\n",
+        "transcripts for side-by-side quality judgement:\n",
+        "1. `vasista22/whisper-tamil-large-v2` (attached as pre-converted CT2 dataset)\n",
+        "2. `deepdml/whisper-large-v3-turbo-ta-mix-norm` (code-mix tuned, 4-layer decoder)\n",
+        "3. `openai/whisper-large-v3` (vanilla baseline)"]},
+    {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": [
+        "!pip -q install faster-whisper ctranslate2 transformers soundfile"]},
+    {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": [
+        "import glob, subprocess, numpy as np, os\n",
+        "\n",
+        "for root, dirs, files in os.walk('/kaggle/input'):\n",
+        "    print(root, '->', files[:8])\n",
+        "cands = [p for p in glob.glob('/kaggle/input/**/*.wav', recursive=True) +\n",
+        "         glob.glob('/kaggle/input/**/*.mp3', recursive=True)]\n",
+        "assert cands, 'no audio mounted'\n",
+        "clip = sorted(cands)[0]\n",
+        "print('clip:', clip)\n",
+        "r = subprocess.run(['ffmpeg','-v','error','-i',clip,'-f','f32le','-acodec','pcm_f32le','-ar','16000','-ac','1','-'],\n",
+        "                   capture_output=True, check=True)\n",
+        "AUDIO = np.frombuffer(r.stdout, dtype=np.float32)\n",
+        "print('decoded', len(AUDIO)/16000, 'sec')"]},
+    {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": [
+        "import os, subprocess, time\n",
+        "from huggingface_hub import snapshot_download\n",
+        "from transformers import AutoTokenizer\n",
+        "\n",
+        "def ct2_dir(hf_id, name):\n",
+        "    '''Pre-converted model attached as dataset; otherwise download+convert.'''\n",
+        "    for attached in glob.glob(f'/kaggle/input/datasets/*/{name}') + [f'/kaggle/input/{name}']:\n",
+        "        if os.path.isfile(os.path.join(attached, 'model.bin')):\n",
+        "            return attached\n",
+        "    out = f'/kaggle/working/{name}'\n",
+        "    if not os.path.isfile(os.path.join(out, 'model.bin')):\n",
+        "        loc = f'/kaggle/working/hf-{name}'\n",
+        "        snapshot_download(hf_id, local_dir=loc,\n",
+        "                          allow_patterns=['*.json','*.txt','pytorch_model.bin','model.safetensors'])\n",
+        "        AutoTokenizer.from_pretrained(loc).save_pretrained(loc)\n",
+        "        subprocess.run(['ct2-transformers-converter','--model',loc,'--output_dir',out,\n",
+        "                        '--quantization','int8_float16'], check=True)\n",
+        "        AutoTokenizer.from_pretrained(loc).save_pretrained(out)\n",
+        "    return out\n",
+        "\n",
+        "MODELS = [\n",
+        "    ('vasista22-tamil-large-v2', 'vasista22/whisper-tamil-large-v2', 'tamil-ct2-model'),\n",
+        "    ('deepdml-turbo-ta-mix',    'deepdml/whisper-large-v3-turbo-ta-mix-norm', 'ct2-deepdml'),\n",
+        "    ('vanilla-large-v3',        'openai/whisper-large-v3', 'ct2-vanilla'),\n",
+        "]\n",
+        "for name, hf, d in MODELS:\n",
+        "    print(name, '->', ct2_dir(hf, d))"]},
+    {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": [
+        "import time\n",
+        "from faster_whisper import WhisperModel\n",
+        "\n",
+        "def run(model_dir, label):\n",
+        "    m = WhisperModel(model_dir, device='cuda', compute_type='int8_float16')\n",
+        "    t0 = time.time()\n",
+        "    segs, info = m.transcribe(AUDIO, language='ta', beam_size=5, vad_filter=True,\n",
+        "                              vad_parameters={'threshold':0.35,'min_silence_duration_ms':500,'speech_pad_ms':200})\n",
+        "    lines = [f'[{s.start:6.1f}-{s.end:6.1f}] {s.text}' for s in segs]\n",
+        "    dt = time.time()-t0\n",
+        "    del m\n",
+        "    import gc, torch; gc.collect(); torch.cuda.empty_cache()\n",
+        "    print('='*80); print(f'{label}  |  {dt:.1f}s wall | lang={info.language}')\n",
+        "    print('='*80); print('\\n'.join(lines)); print()\n",
+        "    return lines\n",
+        "\n",
+        "results = {}\n",
+        "for name, hf, d in MODELS:\n",
+        "    path = ct2_dir(hf, d)\n",
+        "    try: results[name] = run(path, name)\n",
+        "    except Exception as e: print(name, 'FAILED:', e)\n",
+        "\n",
+        "with open('/kaggle/working/model_comparison.txt','w',encoding='utf-8') as f:\n",
+        "    for name, lines in results.items():\n",
+        "        f.write('='*80+'\\n'+name+'\\n'+'='*80+'\\n'+'\\n'.join(lines)+'\\n\\n')\n",
+        "print('saved model_comparison.txt')"]},
+    {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": [
+        "# don't let multi-GB converted models inflate the kernel output download\n",
+        "import shutil, glob\n",
+        "for d in glob.glob('/kaggle/working/ct2-*') + glob.glob('/kaggle/working/hf-*'):\n",
+        "    shutil.rmtree(d, ignore_errors=True)\n",
+        "    print('removed', d)"]},
+]
+
+nb = {"cells": cells,
+      "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+                   "language_info": {"name": "python", "version": "3.10"}},
+      "nbformat": 4, "nbformat_minor": 4}
+
+nb_path = os.path.join(ROOT, 'notebooks', 'tamil_model_eval.ipynb')
+json.dump(nb, open(nb_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+run_dir = os.path.join(ROOT, 'kaggle_eval')
+os.makedirs(run_dir, exist_ok=True)
+json.dump({
+    "id": "srikrishnaos/tamil-model-eval", "title": "tamil model eval",
+    "code_file": "tamil_model_eval.ipynb", "language": "python",
+    "kernel_type": "notebook", "is_private": True, "enable_gpu": True,
+    "enable_internet": True,
+    "dataset_sources": ["srikrishnaos/tamil-call-samples", "srikrishnaos/tamil-ct2-model"],
+    "competition_sources": [], "kernel_sources": []},
+    open(os.path.join(run_dir, 'kernel-metadata.json'), 'w'), indent=1)
+
+shutil.copy(nb_path, os.path.join(run_dir, 'tamil_model_eval.ipynb'))
+print('eval kernel package ready')

@@ -1,0 +1,65 @@
+[{"stream_name":"stderr","time":6.662205393,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.662246455,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.662251046,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.662255188,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.273054247,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.273089429,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.273094273,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.273098357,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.560869701,"data":"--- t+0s ---\n"}
+,{"stream_name":"stdout","time":8.560902759,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":8.560907703,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":8.560911493999999,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":8.560915335,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":8.560919259,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":9.092391962,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":9.092429067,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":19.096136629,"data":"--- t+10s ---\n"}
+,{"stream_name":"stdout","time":19.096186245,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":19.096192241,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":19.096195057,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":19.096198076,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":19.096200873,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":19.437408699,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":19.437443856,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":29.438318394,"data":"--- t+20s ---\n"}
+,{"stream_name":"stdout","time":29.438351945,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":29.438356671,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":29.438376926,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":29.438380049,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":29.438382799,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":29.779973056,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":29.780004119,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":39.781718184,"data":"--- t+30s ---\n"}
+,{"stream_name":"stdout","time":39.781741919,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":39.781745599,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":39.781748367,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":39.781751163,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":39.781754066,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":39.781756823,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":39.781759868,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":49.790687964,"data":"--- t+40s ---\n"}
+,{"stream_name":"stdout","time":49.790724316,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":49.79072838,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":49.790731562,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":49.790734707,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":49.790738055,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":50.117802918,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":50.117839911,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":60.119047007,"data":"--- t+50s ---\n"}
+,{"stream_name":"stdout","time":60.119088346,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":60.119093894,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":60.119098456,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":60.119115324,"data":"/kaggle/input/datasets/srikrishnaos/voice-processing-code -\u003e ['transcribe.py', 'requirements.txt']\n"}
+,{"stream_name":"stdout","time":60.119119378,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":60.119123808,"data":"/kaggle/input/datasets/srikrishnaos/tamil-calls-b001 -\u003e ['Amma-2610131225.mp3', 'Amma-2605150905.mp3', 'Amma-2605201422-1.mp3', 'Akash S CSE A Ssn-2603220935.mp3', 'Amma-2603231254.mp3', 'Amma-2603151520.mp3', 'Amma-2605130749.mp3', '+918618437517-2604121809.mp3', '+919886850418-2603291541.mp3', 'Amma-2605261243-1.mp3']\n"}
+,{"stream_name":"stdout","time":60.11913007,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stderr","time":75.187639688,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":75.187671151,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":75.352153956,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":75.352197426,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":76.070276482,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":76.145466149,"data":"[NbConvertApp] Writing 6772 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":78.739103683,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":79.257108253,"data":"[NbConvertApp] Writing 279585 bytes to __results__.html\n"}
+]

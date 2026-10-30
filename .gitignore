@@ -32,6 +32,11 @@ Thumbs.db
 kaggle_data/
 kaggle_out/
 batches/
+zbatches/
+test_out/
+eval_out/
+*.jsonl
+transcripts/
 hf-model/
 model-ct2/
 *-ct2/

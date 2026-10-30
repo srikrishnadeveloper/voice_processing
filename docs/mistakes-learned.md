@@ -35,6 +35,22 @@
 - 2026-10-29: network flapping → wrap every kaggle API call in a retry loop
   (5-10 tries); signed URLs for kernel output can be fetched once then pulled
   with `curl --retry-all-errors -C -`.
+- 2026-10-30: Kaggle mounts datasets at `/kaggle/input/datasets/<owner>/<slug>`
+  on (at least) CPU workers — NOT `/kaggle/input/<slug>` as older docs show.
+  Mount listing can also lag cell start by ~1-2 min on big datasets. Fix:
+  discover dirs via `glob('/kaggle/input/datasets/*/<slug>')` + a wait loop.
+- 2026-10-30: `kaggle datasets version` MERGES files — the new version keeps
+  old files plus uploaded ones (it's not a clean replace). A dataset can end
+  up holding both loose files and later-added zips → dedupe by preferring
+  loose audio over zip in the consumer.
+- 2026-10-30: Kaggle free tier = max 2 concurrent GPU (batch) sessions. A 3rd
+  `kernels push` fails with 'Maximum batch GPU session count of 2 reached' —
+  retry after a slot frees; serialize GPU pushes.
+- 2026-10-30: per-file dataset upload = ~550 HTTP requests = fragile on flaky
+  networks. Zip each batch into ONE file + dataset-metadata.json instead —
+  single resumable upload, ~4x faster, and kernel-side `zipfile.extractall`
+  is trivial. Keep an orchestrator daemon (upload_state.txt → push kernel →
+  pull outputs) rather than hand-holding each step.
 
 - Stock `whisper-large-v3` is a bad default for low-resource languages; for
   Tamil it loses ~25 WER points to a language-specific fine-tune. Always check

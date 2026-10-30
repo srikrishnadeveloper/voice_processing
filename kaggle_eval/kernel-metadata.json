@@ -1,0 +1,16 @@
+{
+ "id": "srikrishnaos/tamil-model-eval",
+ "title": "tamil model eval",
+ "code_file": "tamil_model_eval.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "srikrishnaos/tamil-call-samples",
+  "srikrishnaos/tamil-ct2-model"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

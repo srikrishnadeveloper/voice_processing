@@ -1,0 +1,46 @@
+[{"stream_name":"stderr","time":6.206168755,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.206219501,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.206223754,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.206226436,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.761149356,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.761189325,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.761194149,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.7611982600000005,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":15.61506677,"data":"/kaggle/input -\u003e []\n"}
+,{"stream_name":"stdout","time":15.615093905,"data":"/kaggle/input/datasets -\u003e []\n"}
+,{"stream_name":"stdout","time":15.615102733,"data":"/kaggle/input/datasets/srikrishnaos -\u003e []\n"}
+,{"stream_name":"stdout","time":15.61510645,"data":"/kaggle/input/datasets/srikrishnaos/tamil-call-samples -\u003e ['sample_2min.wav']\n"}
+,{"stream_name":"stdout","time":15.615109042,"data":"/kaggle/input/datasets/srikrishnaos/tamil-ct2-model -\u003e ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']\n"}
+,{"stream_name":"stdout","time":15.615125745,"data":"clip: /kaggle/input/datasets/srikrishnaos/tamil-call-samples/sample_2min.wav\n"}
+,{"stream_name":"stdout","time":16.260345801,"data":"decoded 120.0 sec\n"}
+,{"stream_name":"stdout","time":40.812743898,"data":"vasista22-tamil-large-v2 -\u003e /kaggle/input/tamil-ct2-model\n"}
+,{"stream_name":"stderr","time":41.652925569,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":41.652957097,"data":"\n"}
+,{"stream_name":"stderr","time":41.652963423,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":81.765120137,"data":"\rLoading weights:   0%|          | 0/587 [00:00\u003c?, ?it/s]\rLoading weights:  18%|█▊        | 104/587 [00:00\u003c00:00, 1033.00it/s]\rLoading weights:   0%|          | 0/587 [00:00\u003c?, ?it/s]\rLoading weights:  18%|█▊        | 104/587 [00:00\u003c00:00, 1033.00it/s]\n"}
+,{"stream_name":"stderr","time":81.972162442,"data":"\rLoading weights:   0%|          | 0/587 [00:00\u003c?, ?it/s]\rLoading weights:  18%|█▊        | 104/587 [00:00\u003c00:00, 1033.00it/s]\rLoading weights:  36%|███▋      | 214/587 [00:00\u003c00:00, 965.03it/s] \rLoading weights:  54%|█████▍    | 319/587 [00:00\u003c00:00, 949.47it/s]\rLoading weights:  36%|███▋      | 214/587 [00:00\u003c00:00, 965.03it/s] \rLoading weights:  54%|█████▍    | 319/587 [00:00\u003c00:00, 949.47it/s]\n"}
+,{"stream_name":"stderr","time":82.159981118,"data":"\rLoading weights:  36%|███▋      | 214/587 [00:00\u003c00:00, 965.03it/s] \rLoading weights:  54%|█████▍    | 319/587 [00:00\u003c00:00, 949.47it/s]\rLoading weights:  72%|███████▏  | 424/587 [00:00\u003c00:00, 934.54it/s]\rLoading weights:  88%|████████▊ | 518/587 [00:00\u003c00:00, 933.38it/s]\rLoading weights: 100%|██████████| 587/587 [00:00\u003c00:00, 957.27it/s]\n"}
+,{"stream_name":"stderr","time":82.199691163,"data":"\rLoading weights:  72%|███████▏  | 424/587 [00:00\u003c00:00, 934.54it/s]\rLoading weights:  88%|████████▊ | 518/587 [00:00\u003c00:00, 933.38it/s]\rLoading weights: 100%|██████████| 587/587 [00:00\u003c00:00, 957.27it/s]\n"}
+,{"stream_name":"stderr","time":82.199755788,"data":"\n"}
+,{"stream_name":"stderr","time":82.199763697,"data":"\rLoading weights:  72%|███████▏  | 424/587 [00:00\u003c00:00, 934.54it/s]\rLoading weights:  88%|████████▊ | 518/587 [00:00\u003c00:00, 933.38it/s]\rLoading weights: 100%|██████████| 587/587 [00:00\u003c00:00, 957.27it/s]\n"}
+,{"stream_name":"stdout","time":90.139086614,"data":"deepdml-turbo-ta-mix -\u003e /kaggle/working/ct2-deepdml\n"}
+,{"stream_name":"stderr","time":133.789177593,"data":"\rLoading weights:   0%|          | 0/1259 [00:00\u003c?, ?it/s]\rLoading weights:  23%|██▎       | 287/1259 [00:00\u003c00:00, 2866.63it/s]\rLoading weights:   0%|          | 0/1259 [00:00\u003c?, ?it/s]\rLoading weights:  23%|██▎       | 287/1259 [00:00\u003c00:00, 2866.63it/s]\n"}
+,{"stream_name":"stderr","time":133.993739926,"data":"\rLoading weights:   0%|          | 0/1259 [00:00\u003c?, ?it/s]\rLoading weights:  23%|██▎       | 287/1259 [00:00\u003c00:00, 2866.63it/s]\rLoading weights:  46%|████▌     | 574/1259 [00:00\u003c00:00, 2753.97it/s]\rLoading weights:  68%|██████▊   | 850/1259 [00:00\u003c00:00, 2732.57it/s]\rLoading weights:  46%|████▌     | 574/1259 [00:00\u003c00:00, 2753.97it/s]\rLoading weights:  68%|██████▊   | 850/1259 [00:00\u003c00:00, 2732.57it/s]\n"}
+,{"stream_name":"stderr","time":134.048300108,"data":"\rLoading weights:  46%|████▌     | 574/1259 [00:00\u003c00:00, 2753.97it/s]\rLoading weights:  68%|██████▊   | 850/1259 [00:00\u003c00:00, 2732.57it/s]\rLoading weights:  89%|████████▉ | 1124/1259 [00:00\u003c00:00, 2688.52it/s]\rLoading weights: 100%|██████████| 1259/1259 [00:00\u003c00:00, 2710.50it/s]\n"}
+,{"stream_name":"stderr","time":134.200124146,"data":"\rLoading weights:  89%|████████▉ | 1124/1259 [00:00\u003c00:00, 2688.52it/s]\rLoading weights: 100%|██████████| 1259/1259 [00:00\u003c00:00, 2710.50it/s]\n"}
+,{"stream_name":"stderr","time":134.200162351,"data":"\n"}
+,{"stream_name":"stderr","time":134.200166695,"data":"\rLoading weights:  89%|████████▉ | 1124/1259 [00:00\u003c00:00, 2688.52it/s]\rLoading weights: 100%|██████████| 1259/1259 [00:00\u003c00:00, 2710.50it/s]\n"}
+,{"stream_name":"stdout","time":144.160124423,"data":"vanilla-large-v3 -\u003e /kaggle/working/ct2-vanilla\n"}
+,{"stream_name":"stdout","time":144.849834738,"data":"vasista22-tamil-large-v2 FAILED: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/kaggle/input/tamil-ct2-model'. Use `repo_type` argument if needed.\n"}
+,{"stream_name":"stdout","time":146.874090741,"data":"deepdml-turbo-ta-mix FAILED: Invalid input features shape: expected an input with shape (1, 128, 3000), but got an input with shape (1, 80, 3000) instead\n"}
+,{"stream_name":"stdout","time":148.486758324,"data":"vanilla-large-v3 FAILED: Invalid input features shape: expected an input with shape (1, 128, 3000), but got an input with shape (1, 80, 3000) instead\n"}
+,{"stream_name":"stdout","time":148.486789899,"data":"saved model_comparison.txt\n"}
+,{"stream_name":"stderr","time":152.467351467,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":152.467377844,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":152.621114136,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":152.621144943,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":154.557577655,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":154.641032391,"data":"[NbConvertApp] Writing 79752 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":157.041300833,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":157.554720257,"data":"[NbConvertApp] Writing 352253 bytes to __results__.html\n"}
+]

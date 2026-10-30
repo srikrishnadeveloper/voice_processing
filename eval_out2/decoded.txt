@@ -1,0 +1,32 @@
+﻿[     6.2] 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     6.2] 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     6.2] 0.00s - to python to disable frozen modules.
+[     6.2] 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[     6.8] 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+[     6.8] 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+[     6.8] 0.00s - to python to disable frozen modules.
+[     6.8] 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[    15.6] /kaggle/input -> []
+[    15.6] /kaggle/input/datasets -> []
+[    15.6] /kaggle/input/datasets/srikrishnaos -> []
+[    15.6] /kaggle/input/datasets/srikrishnaos/tamil-call-samples -> ['sample_2min.wav']
+[    15.6] /kaggle/input/datasets/srikrishnaos/tamil-ct2-model -> ['model.bin', 'config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocabulary.json']
+[    15.6] clip: /kaggle/input/datasets/srikrishnaos/tamil-call-samples/sample_2min.wav
+[    16.3] decoded 120.0 sec
+[    40.8] vasista22-tamil-large-v2 -> /kaggle/input/tamil-ct2-model
+[    41.7] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[    41.7] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+python : Traceback (most recent call last):
+At line:1 char:1
++ python 'C:\Users\srik2\Desktop\extra\voice_processing\tools\show_log. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\srik2\Desktop\extra\voice_processing\tools\show_log.py", line 31, in <module>
+    print(f"[{e.get('time', 0):8.1f}] {d}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srik2\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 91-92: character maps to <undefined>
